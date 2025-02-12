@@ -14,7 +14,7 @@ const AddBlog = () => {
       .then((data) => setBlog(data));
   }, []);
 
-  const [error, setError] = useState("");
+
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
