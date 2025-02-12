@@ -1,4 +1,3 @@
-# Assignment_category_05
 
 ## Blog Website
 
