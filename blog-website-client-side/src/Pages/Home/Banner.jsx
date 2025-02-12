@@ -28,7 +28,7 @@ const Banner = () => {
               Welcome to <br />
               Our Blog!
             </h1>
-            <p className="para">
+            <p className="dark:text-gray-400 text-xs md:text-sm mb-6 text-text  text-center">
               Explore insightful articles, expert tips, in-depth guides, and the
               latest trends in technology, lifestyle, and more.
             </p>
