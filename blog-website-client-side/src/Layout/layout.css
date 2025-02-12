@@ -1,0 +1,34 @@
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+body.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+body.light .App-header {
+  background-color: #f0f0f0;
+}
+
+body.light button {
+  background-color: #1e90ff;
+  color: white;
+}
+
+body.light button:hover {
+  background-color: #4682b4;
+}
+
+
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .App-header {
+  background-color: #333333;
+}
+
+
