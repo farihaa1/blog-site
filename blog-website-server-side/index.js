@@ -9,7 +9,7 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Middleware
+
 app.use(cors({
   origin: ["https://blog-website-server-side.vercel.app", "http://localhost:5173","http://localhost:5000"], 
   methods: ["GET", "POST", "PUT", "DELETE"],
@@ -38,7 +38,6 @@ const verifyToken = (req, res, next) => {
   });
 };
 
-// MongoDB Connection
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.cd15p.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, {
   serverApi: {
@@ -48,7 +47,7 @@ const client = new MongoClient(uri, {
   },
 });
 
-// Main Function
+
 async function run() {
   try {
     // await client.connect();
@@ -58,7 +57,7 @@ async function run() {
     const commentsCollection = client.db("blogSiteDb").collection("comments");
     const usersCollection = client.db("blogSiteDb").collection("users");
 
-    // Auth related APIs
+   
     app.post("/jwt", async (req, res) => {
       const user = req.body;
       const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
